@@ -75,3 +75,27 @@ myToggleClass($par, 'border'); //
 myToggleClass($par, 'border'); // + border
 myToggleClass($par, 'QWERTY'); // ++ QWERTY
 // console.log(par.className);
+
+//******************* FOURTH EXERCISE ******************//
+
+const $buttons = document.querySelectorAll('.tabs-list > button');
+
+for (const button of $buttons) {
+    button.addEventListener('click', () => {
+        const $currentBTN = button;
+        const tabId = $currentBTN.getAttribute('data-target');
+        const $currentTab = document.getElementById(tabId);
+
+        $buttons.forEach(btn => {
+            btn.classList.remove('is-active');
+        });
+
+        const $tabs = document.querySelectorAll('.tabs-content > div');
+        $tabs.forEach(tab => {
+            tab.hidden = true;
+        });
+
+        $currentBTN.classList.add('is-active');
+        $currentTab.hidden = false;
+    });
+}
