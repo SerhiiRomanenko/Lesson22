@@ -65,13 +65,13 @@ function myToggleClass(elem, classOfElem) {
         arrOfClasses.splice(matches, COUNT_OF_ELEMENTS);
         elem.className = arrOfClasses.join(' ');
     }
-    // console.log(par.className);
     return elem;
 }
 
-myToggleClass($par, 'border'); // - border
-myToggleClass($par, 'border'); // +
-myToggleClass($par, 'border'); // - border
-myToggleClass($par, 'border'); // +
-myToggleClass($par, 'border'); // - border
+myToggleClass($par, 'border'); // + border
+myToggleClass($par, 'border'); //
+myToggleClass($par, 'border'); // + border
+myToggleClass($par, 'border'); //
+myToggleClass($par, 'border'); // + border
 myToggleClass($par, 'QWERTY'); // ++ QWERTY
+// console.log(par.className);
